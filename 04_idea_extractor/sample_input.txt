@@ -1,0 +1,11 @@
+Standup notes, Tuesday
+
+Jakub said he'd get the repo scaffolded before the weekend, this is blocking
+everyone else so it needs to happen first. Someone needs to book a room for the
+demo but there's no rush on that one. Sarah mentioned the API keys still aren't
+rotated - that's been open for two weeks now and it's a security thing so we
+can't keep sitting on it. Also we should probably think about writing some tests
+at some point, nobody has picked that up yet.
+
+Tom is away until Thursday but when he's back he owes us the slide deck for the
+review. Not urgent, the review isn't until the following week.
