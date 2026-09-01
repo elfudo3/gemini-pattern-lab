@@ -7,8 +7,11 @@ def get_weather(city:str) -> str:
     Args:
         city: Name of city, e.g. "Dublin"
     """
+    print(f">>> get weather actually ran with city={city}")
     fake_data = {"dublin": "12C, raining", "madrid": "28C, sunny"}
-    return fake_data(city.lower(), "No data for that city")
+    result = fake_data.get(city.lower(), "No data for that city")
+    print(f">>> get_weather({city!r}) -> {result!r}")
+    return result
 
 def calculate(expression: str) -> str:
     """Evaluate a simple arithmetic expression.
@@ -16,6 +19,7 @@ def calculate(expression: str) -> str:
     Args:
         expression: A maths expression, e.g. "23 * 47
     """
+    print(f">>> get answer for expression=({expression})")
     try:
         # eval() executes the input as Python code, it's not restricted to arithmetic
         # it's fine for this sandbox but never put it in something real
