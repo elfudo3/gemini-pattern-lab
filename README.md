@@ -1,6 +1,7 @@
 # gemini-pattern-lab
 Six bite sized Python projects for learning Gemini API patterns.
-Specifically made in preparation Google AI Hackathon 2026 Dublin!! 
+
+*Specifically made in preparation Google AI Hackathon 2026 Dublin!!* 
 
 <img width="346" height="218" alt="image" src="https://github.com/user-attachments/assets/24e07700-79f1-4ba1-a118-34979a8501cb" />
 
