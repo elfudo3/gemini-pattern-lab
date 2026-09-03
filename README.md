@@ -1,5 +1,6 @@
 # gemini-pattern-lab
 Six bite sized Python projects for learning Gemini API patterns
+
 ---
 
 ## Projects
@@ -18,4 +19,37 @@ Six bite sized Python projects for learning Gemini API patterns
 
 ---
 
-Each time we start up the program run `source .venv/bin/activate` to activate the virtual environment
+## How to Run Locally
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/elfudo3/gemini-pattern-lab.git
+   cd gemini-pattern-lab
+   ```
+
+2. **Create a virtual environment**
+   ```bash
+   python -m venv .venv
+   source .venv/bin/activate
+   ```
+
+3. **Install dependencies**
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+4. **Set up your API key**
+   - Copy `.env.example` to `.env`
+   - Add your Gemini API key and model name:
+     ```
+     GEMINI_API_KEY=your_api_key_here
+     GEMINI_MODEL=gemini-2.0-flash
+     ```
+
+5. **Run a project**
+   ```bash
+   cd 01_prompt_lab
+   python hello.py
+   ```
+
+Each time you return to work, activate the virtual environment with `source .venv/bin/activate`
