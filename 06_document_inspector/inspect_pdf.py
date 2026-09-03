@@ -13,19 +13,15 @@ MODEL = os.environ["GEMINI_MODEL"]
 # so the script works regardles of which directory we run it from
 HERE = Path(__file__).parent 
 
-#read the images in raw binary mode
-image_bytes = (HERE / "samples" / "photo.jpg").read_bytes()
+pdf_bytes = (HERE / "samples" / "doc.pdf").read_bytes()
 
 response = client.models.generate_content(
     model=MODEL,
-    #contents is a list here: one file part, one text part
     contents=[
-        types.Part.from_bytes(data=image_bytes, mime_type="image/jpeg"),
-        "Describe what you see in this image in two sentences.",
+        types.Part.from_bytes(data=pdf_bytes, mime_type="application/pdf"),
+        "Summarise the key points of this document as a bulleted list"
     ],
 )
 
 print(response.text)
 print("tokens in:", response.usage_metadata.prompt_token_count)
-
-#NICE
