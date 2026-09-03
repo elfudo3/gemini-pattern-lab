@@ -6,17 +6,18 @@ from google import genai
 from google.genai import types
 
 
-from pydantic import BaseModel, Field
+from pydantic import BaseModel
 
 load_dotenv()
 client = genai.Client()
 MODEL = os.environ["GEMINI_MODEL"]
 
-
+# Animal class that inherits from Pydantics Basemodel
+# since our image is an animal, the data will be returned in an animal-ish way (Very scientific)
 class Animal(BaseModel):
     type: str
     breed: str
-    colour: float
+    num_animals: int
     background: str
 
 HERE = Path(__file__).parent
