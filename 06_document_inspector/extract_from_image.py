@@ -28,7 +28,7 @@ response = client.models.generate_content(
     model=MODEL,
     contents=[
         types.Part.from_bytes(data=image_bytes, mime_type="image/jpeg"),
-        "Extract the receipt details.",
+        "Describe the animal in this image.",
     ],
     config=types.GenerateContentConfig(
         response_mime_type="application/json",
@@ -37,5 +37,6 @@ response = client.models.generate_content(
     ),
 )
 
-receipt = response.parsed
-print(receipt.total)
+animal = response.parsed
+print(animal.type, animal.breed, animal.num_animals)
+print(animal.background)
